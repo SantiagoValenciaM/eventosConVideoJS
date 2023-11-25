@@ -6,8 +6,9 @@ video.addEventListener('play', function () {
     ponerColor();
 });
 
-video.addEventListener('pause', function () {
-    console.log('Distes pausa al video');
+video.addEventListener('seeking', function () {
+    console.log('Te estas desplazando por el video');
+    console.log(this.currentTime);
 });
 
 video.addEventListener('ended', function () {
@@ -32,9 +33,9 @@ video.addEventListener('ended', function () {
 // }, 2000);
 
 // Solo se ejecuta 1 vez
-// setTimeout(function(){
-//     ponerColor();
-// },3000);
+setTimeout(function(){
+    ponerColor();
+},3000);
 
 function ponerColor () {
     let pantalla = document.body;
@@ -43,8 +44,8 @@ function ponerColor () {
 
 // arreglos, vectores, arrays
 
-let array = ['uno','dos','tres'];
-let array2 = ['cuatro','cinco','seis'];
-let arrayMultidimensional = [array,array2];
+// let array = ['uno','dos','tres'];
+// let array2 = ['cuatro','cinco','seis'];
+// let arrayMultidimensional = [array,array2];
 
-arrayMultidimensional[0][1];
+// arrayMultidimensional[0][1];
